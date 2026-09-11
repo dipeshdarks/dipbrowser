@@ -1,8 +1,11 @@
 appId: com.dipbrowser.app
 productName: DipBrowser
 directories:
-  buildResources: resources
   output: release
+publish:
+  provider: github
+  owner: dipeshdarks
+  repo: dipbrowser
 files:
   - "!**/.vscode/*"
   - "!src/*"
@@ -14,7 +17,6 @@ win:
     - target: nsis
       arch:
         - x64
-  icon: resources/icons/icon.ico
   artifactName: ${productName}-${version}-setup.${ext}
 nsis:
   artifactName: ${productName}-${version}-setup.${ext}
@@ -29,12 +31,10 @@ mac:
       arch:
         - x64
         - arm64
-  icon: resources/icons/icon.icns
   category: public.app-category.browsers
 linux:
   target:
     - target: AppImage
       arch:
         - x64
-  icon: resources/icons
   category: Network

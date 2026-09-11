@@ -1,0 +1,44 @@
+{
+  "name": "dipbrowser",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DipBrowser — Fast. Secure. Yours.",
+  "main": "./out/main/index.js",
+  "author": "DipBrowser Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "postinstall": "electron-rebuild",
+    "rebuild": "electron-rebuild",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "package": "electron-vite build && electron-builder --win --publish never",
+    "package:mac": "electron-vite build && electron-builder --mac --publish never",
+    "package:linux": "electron-vite build && electron-builder --linux --publish never"
+  },
+  "dependencies": {
+    "6": "^0.0.1",
+    "better-sqlite3": "^11.7.0",
+    "gta": "^0.0.1-beta.1",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.20",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.0",
+    "electron-rebuild": "^3.2.9",
+    "electron-vite": "^2.3.0",
+    "postcss": "^8.4.49",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.0"
+  }
+}

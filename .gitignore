@@ -1,0 +1,11 @@
+node_modules/
+out/
+release/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.planning/
+*.log
+.DS_Store
+Thumbs.db
